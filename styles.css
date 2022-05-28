@@ -1,0 +1,383 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: prompt, "sans-serif";
+    position: relative;
+    background-color: rgb(250, 248, 248);
+    overflow-x: hidden;
+}
+
+h2 {
+    color:#ff8b68;
+}
+
+svg text {
+    font-family: "Font Awesome 5 Free";
+}
+
+/* Hero Image */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://monogramcc.com/static/477ea039ed65c2cc13a3e4762ce5f352/6db79/shop-cta-xl.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+}
+
+.hero-container {
+    float: right;
+    height: 100vh;
+    text-align: center;
+    width: 50%;
+}
+
+.hero-content {
+    position: relative;
+    font-family: prompt, sans-serif;
+    color: #1a2456;
+    text-align: left;
+    margin-left: auto;
+    top: 50%;
+    width: 50%;
+}
+
+.hero-content .hero-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    color:#1a2456;
+}
+
+/*Navigation Bar*/ 
+
+nav {
+    position: fixed;
+    background: #1a2456;
+    height: 75px;
+    width: 97vw;
+    padding: 10px;
+    margin: 20px;
+    z-index: 11;
+}
+
+.logo {
+    color: #ff8b68;
+    font-size: 1rem;
+    line-height: 50px;
+    padding: 0 10px;
+    margin-left: 80px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #ff8b68;
+}
+
+a:hover {
+    color: #ff501c;
+    transition: .5s;
+}
+
+.workflow:hover {
+    color: #f0efed;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #ff8b68;
+    line-height: 50px;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 980px) {
+    .logo {
+        font-size: .7rem;
+        padding-left: 30px;
+    }
+
+    nav ul li a {
+        font-size: .7rem;
+    }
+
+    .image1 {
+        width: 800px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #1a2456;
+        top: 70px;
+        left: -100%;
+        text-align: center;
+        transition: ease all .5s;
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        font-size: .7rem;
+    }
+
+    a:hover {
+        color: #ff501c;
+        transition: ease all .5s;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+        transition: ease all .5s;
+    }
+
+    
+}
+
+
+/* Cards  */
+
+.card-container {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.card img {
+    width: 600px;
+    height: 500px;
+    object-fit: contain;
+}
+
+.card img.image-hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.card:hover img.image-hover {
+    opacity: 1;
+  }
+
+.card h4, p {
+    color: #1a2456;
+}
+
+
+/* Banner  */
+
+.banner {
+    max-width: 100%;
+    overflow: hidden;
+    margin-top: 5%;
+}
+
+.banner-container {
+    position: relative;
+}
+
+.banner-text {
+    position: absolute;
+    margin-top: 15vh;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.banner-text h2, p {
+    color: #1a2456;
+}
+
+.banner-text p {
+    text-transform: initial;
+}
+
+/* Cards 2 */
+
+.card2-container {
+    display: inline-block;
+    margin: 0 10%;
+    width: 100%;
+    text-align: left;
+}
+
+.card2 {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.card2 img {
+    width: 400px;
+    height: 350px;
+    object-fit: contain;
+    display: block;
+}
+
+.card2 img.image-hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.card2:hover img.image-hover {
+    opacity: 1;
+  }
+
+footer {
+    text-align: left;
+}
+
+/* Footer  */
+
+.monogram-footer {
+    background-color: #1a2456;
+    height: 50vh;
+    margin-top: 5%;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    padding: 5% 10% 0 10%;
+    height: 80vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 100px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.cell {
+    margin-left: 3%;;
+    width: 10vw;
+    font-size: .8rem;
+}
+
+.cell h2 {
+    font-size: 1rem;
+    margin-bottom: 5%;
+}
+
+.cell p {
+    color:#ff8b68;
+    margin: 2% 0;
+}
+
+.cell-2 a, .cell-3 a, .cell-4 a {
+    color: #ff8b68;
+}
+
+.cell-2 a:hover, .cell-3 a:hover, .cell-4 a:hover {
+    color: #ff501c;
+    text-decoration: underline;
+}
+
+.cell-5 {
+    width: fit-content;
+}
+
+.email-input {
+    border-color:#ff8b68;
+    background-color:#1a2456;
+    color:#ff8b68;
+    height: 30px;
+    width: 240px;
+}
+
+.submit-btn {
+    border-radius: 25px;
+    height: 30px;
+    width: 80px;
+    margin-left: 5%;
+}
+
+.first {
+    color: #ff8b68;
+    margin: 5% 0 0 0;
+}
+
+.second {
+    color: #ff8b68;
+    margin: 5% 0 0 10%;
+}
+
+div i:hover {
+    cursor: pointer;
+}
